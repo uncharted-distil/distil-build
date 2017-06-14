@@ -10,7 +10,7 @@ RUN npm install -g yarn
 RUN go get -u github.com/golang/lint/golint
 RUN go get -u github.com/Masterminds/glide
 
-RUN mkdir -p src/github.com/unchartedsoftware/distil-server
+RUN mkdir -p src/github.com/unchartedsoftware/distil
 RUN mkdir -p src/github.com/unchartedsoftware/distil-ingest
 
 
