@@ -1,2 +1,5 @@
-#!/bin/bash
-docker build -t docker.uncharted.software/distil-build:0.4 .
+#!/bin/sh
+glide install && \
+    yarn install && \
+    yarn build  && \
+    go build -ldflags "-X main.version=`git describe --tags` -X main.timestamp=`date +%FT%T%z`"

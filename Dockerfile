@@ -13,5 +13,6 @@ RUN go get -u github.com/Masterminds/glide
 RUN mkdir -p src/github.com/unchartedsoftware/distil
 RUN mkdir -p src/github.com/unchartedsoftware/distil-ingest
 
+ADD ./build.sh /
 
 
