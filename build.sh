@@ -2,4 +2,4 @@
 glide install && \
     yarn install && \
     yarn build  && \
-    go build -ldflags "-X main.version=`git describe --tags` -X main.timestamp=`date +%FT%T%z`"
+    go build -ldflags "-X main.version=`git log --pretty=format:'%h' -n 1` -X main.timestamp=`date +%FT%T%z`"
