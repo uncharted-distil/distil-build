@@ -10,13 +10,8 @@ RUN go get -u github.com/Masterminds/glide
 RUN mkdir -p src/github.com/unchartedsoftware/distil
 RUN mkdir -p src/github.com/unchartedsoftware/distil-ingest
 
-ARG rsakey
-RUN test -n "${rsakey}" && { \
-    mkdir -p -m 700 /root/.ssh; \
-    echo "${rsakey}" > /root/.ssh/id_rsa; \
-    chmod 600 /root/.ssh/id_rsa; \
-    echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > /root/.ssh/config; \
-    chmod 400 /root/.ssh/config; \
-} || :
-
+RUN mkdir -p -m 700 /root/.ssh;
+COPY circle_ci_rsa.pub config /root/.ssh/
+RUN chmod 600 /root/.ssh/circle_ci_rsa.pub
+RUN chmod 400 /root/.ssh/config
 ADD ./build.sh /
