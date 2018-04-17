@@ -1,4 +1,4 @@
-FROM golang:1.8-alpine
+FROM golang:1.10.1-alpine
 
 RUN apk update && apk add curl git nodejs openssh-client
 
