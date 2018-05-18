@@ -1,3 +1,3 @@
 #!/bin/sh
 docker push docker.uncharted.software/distil-build:latest
-docker push docker.uncharted.software/distil-build:0.8
+docker push docker.uncharted.software/distil-build:0.9

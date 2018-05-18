@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build -t docker.uncharted.software/distil-build:0.8 .
-docker tag docker.uncharted.software/distil-build:0.8 docker.uncharted.software/distil-build:latest
+docker build -t docker.uncharted.software/distil-build:0.9 .
+docker tag docker.uncharted.software/distil-build:0.9 docker.uncharted.software/distil-build:latest

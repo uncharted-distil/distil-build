@@ -5,7 +5,7 @@ RUN apk update && apk add curl git nodejs openssh-client
 RUN npm install -g yarn
 
 RUN go get -u github.com/golang/lint/golint
-RUN go get -u github.com/Masterminds/glide
+RUN go get -u github.com/golang/dep/cmd/dep
 
 RUN mkdir -p src/github.com/unchartedsoftware/distil
 RUN mkdir -p src/github.com/unchartedsoftware/distil-ingest
