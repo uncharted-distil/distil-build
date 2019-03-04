@@ -1,3 +1,5 @@
-#!/bin/sh
-docker push docker.uncharted.software/distil-build:latest
-docker push docker.uncharted.software/distil-build:0.9
+#!/bin/bash
+
+source ./config.sh
+docker push $DOCKER_REPO/$DOCKER_IMAGE:latest
+docker push $DOCKER_REPO/$DOCKER_IMAGE:$IMAGE_VERSION

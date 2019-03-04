@@ -1,4 +1,0 @@
-Host github.com
-	StrictHostKeyChecking no
-	IdentitiesOnly yes
-	IdentityFile /root/.ssh/circle_ci_rsa.pub
