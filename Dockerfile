@@ -1,6 +1,6 @@
 FROM golang:1.13.1-alpine3.10
 
-RUN apk update && apk add curl git openssh-client npm gcc
+RUN apk update && apk add curl git openssh-client npm
 RUN npm install -g yarn
 
 RUN go get -u golang.org/x/lint/golint
