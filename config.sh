@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IMAGE_VERSION=0.15.0
+IMAGE_VERSION=0.15.1
 
 DOCKER_REPO=docker.uncharted.software
 
