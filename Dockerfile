@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-
+COPY install_image_upscale.sh ./
 RUN apt-get update && \
     apt-get install -y software-properties-common curl libpq-dev && \
     rm -rf /var/lib/apt/lists/* 
@@ -23,5 +23,5 @@ RUN mkdir -p src/github.com/uncharted-distil/distil
 RUN mkdir -p src/github.com/uncharted-distil/distil-ingest
 
 RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.33.0
-
+RUN ./install_image_upscale.sh
 ADD ./build.sh /
